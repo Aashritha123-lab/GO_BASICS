@@ -28,6 +28,7 @@ var mu sync.Mutex
 
 // create handler
 
+// A handler is the code that handles an incoming HTTP request (reads it + sends a response).
 func carhandler(w http.ResponseWriter, r *http.Request) {
 	// &http.Request{
 	//     Method: "GET",
