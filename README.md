@@ -79,7 +79,7 @@ yaml
 		  "Price": 25000.5
 		}
 		
-###2. Get a Car by ID
+### 2. Get a Car by ID
 
 		GET /cars/{id}
 
@@ -99,7 +99,7 @@ yaml
 		  "Price": 25000.5
 		}
 
-###3. Delete a Car
+### 3. Delete a Car
 
 		DELETE /cars/{id}
 
@@ -112,13 +112,13 @@ yaml
 
 		Status: 200 OK
 
-##🛠️ Tech Stack
+## 🛠️ Tech Stack
 
 	Language: Go
 
 	Packages: net/http, encoding/json, sync, math/rand
 
-##📌 Notes
+## 📌 Notes
 
 	Data is stored in memory only. If you restart the server, all cars are lost.
 
@@ -126,7 +126,7 @@ yaml
 
 	For real-world use, you’d replace the in-memory map with a database (e.g., PostgreSQL, MongoDB).
 
-##🚀 Future Improvements
+## 🚀 Future Improvements
 
 	Add GET /cars to fetch all cars.
 
@@ -136,7 +136,7 @@ yaml
 
 	Persistent database storage.
 
-##👤 Author
+## 👤 Author
 
-Your Name
-GitHub: @Aashritha-123-lab
+	Your Name
+	GitHub: @Aashritha-123-lab
