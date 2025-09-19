@@ -31,18 +31,21 @@ The API supports:
    git clone https://github.com/<your-username>/GO_BASICS.git
    cd GO_BASICS
 
-2. Run the server:
-bash
+Run the server:
+
 go run main.go
-The server will start on: http://localhost:3051
 
-API Endpoints
 
+The server will start on:
+
+http://localhost:3051
+
+🔗 API Endpoints
 1. Create a Car
+
 POST /cars
 Request Body (JSON):
-```bash
-json
+
 {
   "Name": "Civic",
   "Model": "2022",
@@ -51,9 +54,8 @@ json
   "Price": 25000.50
 }
 
-Response:
 
-json
+Response:
 
 {
   "ID": 123,
@@ -65,15 +67,15 @@ json
 }
 
 2. Get a Car by ID
+
 GET /cars/{id}
 
 Example:
 
 GET http://localhost:3051/cars/123
 
-Response:
 
-json
+Response:
 
 {
   "ID": 123,
@@ -85,22 +87,26 @@ json
 }
 
 3. Delete a Car
+
 DELETE /cars/{id}
 
 Example:
 
 DELETE http://localhost:3051/cars/123
 
+
 Response:
 
 Status: 200 OK
 
 🛠️ Tech Stack
+
 Language: Go
 
 Packages: net/http, encoding/json, sync, math/rand
 
 📌 Notes
+
 Data is stored in memory only. If you restart the server, all cars are lost.
 
 rand.Intn(1000) is used for generating car IDs → collisions are possible in rare cases.
@@ -108,6 +114,7 @@ rand.Intn(1000) is used for generating car IDs → collisions are possible in ra
 For real-world use, you’d replace the in-memory map with a database (e.g., PostgreSQL, MongoDB).
 
 🚀 Future Improvements
+
 Add GET /cars to fetch all cars.
 
 Add PUT /cars/{id} to update car details.
@@ -117,5 +124,6 @@ Replace random ID generation with proper UUIDs.
 Persistent database storage.
 
 👤 Author
+
 Your Name
 GitHub: @Aashritha-123-lab
