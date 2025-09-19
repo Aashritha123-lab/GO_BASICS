@@ -36,3 +36,5 @@ yaml
 ```bash
 git clone https://github.com/<your-username>/GO_BASICS.git
 cd GO_BASICS
+
+2. Run the server
