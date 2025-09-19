@@ -30,7 +30,7 @@ The API supports:
    ```bash
    git clone https://github.com/<your-username>/GO_BASICS.git
    cd GO_BASICS
----
+   
 
 ## ▶️ 2. Run the server:
 
@@ -38,7 +38,6 @@ The API supports:
 
 	The server will start on: http://localhost:3051
 
----
 ## 🔗 API Endpoints
 1. Create a Car
 
