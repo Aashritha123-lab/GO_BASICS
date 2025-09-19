@@ -30,23 +30,19 @@ The API supports:
    ```bash
    git clone https://github.com/<your-username>/GO_BASICS.git
    cd GO_BASICS
+
 Run the server:
 
-bash
-Copy code
 go run main.go
-The server will start on:
+The server will start on: http://localhost:3051
 
-arduino
-Copy code
-http://localhost:3051
-🔗 API Endpoints
+API Endpoints
+
 1. Create a Car
 POST /cars
 Request Body (JSON):
 
 json
-Copy code
 {
   "Name": "Civic",
   "Model": "2022",
@@ -54,10 +50,11 @@ Copy code
   "Year": 2022,
   "Price": 25000.50
 }
+
 Response:
 
 json
-Copy code
+
 {
   "ID": 123,
   "Name": "Civic",
@@ -66,18 +63,18 @@ Copy code
   "Year": 2022,
   "Price": 25000.5
 }
+
 2. Get a Car by ID
 GET /cars/{id}
 
 Example:
 
-bash
-Copy code
 GET http://localhost:3051/cars/123
+
 Response:
 
 json
-Copy code
+
 {
   "ID": 123,
   "Name": "Civic",
@@ -86,19 +83,18 @@ Copy code
   "Year": 2022,
   "Price": 25000.5
 }
+
 3. Delete a Car
 DELETE /cars/{id}
 
 Example:
 
-bash
-Copy code
 DELETE http://localhost:3051/cars/123
+
 Response:
 
-makefile
-Copy code
 Status: 200 OK
+
 🛠️ Tech Stack
 Language: Go
 
