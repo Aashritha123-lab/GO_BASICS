@@ -33,19 +33,47 @@ yaml
 ## ▶️ How to Run
 
 ### 1. Clone the repository
-	```bash
+	
 	git clone https://github.com/<your-username>/GO_BASICS.git
 	cd GO_BASICS 
-	```
+	
 
 
 ### 2. Run the server
-	```bash
+
 	 go run main.go
-	```
+
 
 
 ### 3. Access the server
 
 	The server will start on:
 	http://localhost:3051
+	
+	
+## 🔗 API Endpoints
+	### 1. Create a Car
+
+		POST /cars
+
+		Request Body (JSON):
+
+		{
+		  "Name": "Civic",
+		  "Model": "2022",
+		  "Company": "Honda",
+		  "Year": 2022,
+		  "Price": 25000.50
+		}
+
+
+		Response:
+
+		{
+		  "ID": 123,
+		  "Name": "Civic",
+		  "Model": "2022",
+		  "Company": "Honda",
+		  "Year": 2022,
+		  "Price": 25000.5
+		}
