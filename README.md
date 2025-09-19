@@ -26,54 +26,58 @@ The API supports:
 
 ## ▶️ How to Run
 
-## 1. Clone the repository:
+### 1. Clone the repository:
    ```bash
    git clone https://github.com/<your-username>/GO_BASICS.git
-   cd GO_BASICS
+   cd GO_BASICS ```
    
+---
 
-## 2. Run the server:
+### 2. Run the server:
 
 	go run main.go
 
 	The server will start on: http://localhost:3051
+	
+---
 
 ## 🔗 API Endpoints
-1. Create a Car
-
-POST /cars
-Request Body (JSON):
-
--{
-  - "Name": "Civic",
-  - "Model": "2022",
-  - "Company": "Honda",
-  - "Year": 2022,
-  - "Price": 25000.50
-}
-
-
-Response:
-
-{
-  "ID": 123,
-  "Name": "Civic",
-  "Model": "2022",
-  "Company": "Honda",
-  "Year": 2022,
-  "Price": 25000.5
-}
-
-2. Get a Car by ID
-
-GET /cars/{id}
-
-Example:
-
-GET http://localhost:3051/cars/123
+### 1. Create a Car
+	
+	POST /cars
+	
+	Request Body (JSON):
+		```bash
+		- {
+		  - "Name": "Civic",
+		  - "Model": "2022",
+		  - "Company": "Honda",
+		  - "Year": 2022,
+		  - "Price": 25000.50
+		- }```
 
 
-Response:
+	Response:
+		```bash
+		- {
+		  - "ID": 123,
+		  - "Name": "Civic",
+		  - "Model": "2022",
+		  - "Company": "Honda",
+		  - "Year": 2022,
+		  - "Price": 25000.5
+		}```
+
+### 2. Get a Car by ID
+
+	GET /cars/{id}
+
+	Example:
+
+	```bash GET http://localhost:3051/cars/123 ```
+
+
+	Response:
 
 {
   "ID": 123,
