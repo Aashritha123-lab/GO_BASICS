@@ -32,7 +32,7 @@ The API supports:
    cd GO_BASICS
 
 Run the server:
-
+```bash
 go run main.go
 The server will start on: http://localhost:3051
 
@@ -41,7 +41,7 @@ API Endpoints
 1. Create a Car
 POST /cars
 Request Body (JSON):
-
+```bash
 json
 {
   "Name": "Civic",
