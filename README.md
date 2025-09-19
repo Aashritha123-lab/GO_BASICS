@@ -35,6 +35,6 @@ yaml
 ### 1. Clone the repository
 ```bash
 git clone https://github.com/<your-username>/GO_BASICS.git
-cd GO_BASICS
+cd GO_BASICS ```
 
 2. Run the server
