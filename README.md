@@ -66,7 +66,7 @@ The API supports:
 		  - "Company": "Honda",
 		  - "Year": 2022,
 		  - "Price": 25000.5
-		}```
+		}```bash
 
 ### 2. Get a Car by ID
 
