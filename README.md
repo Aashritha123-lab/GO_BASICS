@@ -52,7 +52,8 @@ yaml
 	
 	
 ## 🔗 API Endpoints
-	### 1. Create a Car
+
+### 1. Create a Car
 
 		POST /cars
 
