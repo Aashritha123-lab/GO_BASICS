@@ -35,10 +35,12 @@ yaml
 ```bash
 git clone https://github.com/<your-username>/GO_BASICS.git
 cd GO_BASICS
+
 2. Run the server
-bash
-Copy code
+```bash
+
 go run main.go
+
 3. Access the server
 The server will start on:
 
