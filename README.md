@@ -32,7 +32,7 @@ The API supports:
    cd GO_BASICS
    
 
-## ▶️ 2. Run the server:
+## 2. Run the server:
 
 	go run main.go
 
