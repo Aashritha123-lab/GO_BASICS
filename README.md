@@ -33,8 +33,21 @@ yaml
 ## ▶️ How to Run
 
 ### 1. Clone the repository
-```bash
-git clone https://github.com/<your-username>/GO_BASICS.git
-cd GO_BASICS ```
+	```bash
+	git clone https://github.com/<your-username>/GO_BASICS.git
+	cd GO_BASICS 
+	```
 
-2. Run the server
+---
+
+### 2. Run the server
+	```bash
+	 go run main.go
+	```
+---
+
+### 3. Access the server
+
+	The server will start on:
+	aurdino
+	http://localhost:3051
