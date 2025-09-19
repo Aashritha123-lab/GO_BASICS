@@ -38,16 +38,14 @@ yaml
 	cd GO_BASICS 
 	```
 
----
 
 ### 2. Run the server
 	```bash
 	 go run main.go
 	```
----
+
 
 ### 3. Access the server
 
 	The server will start on:
-	aurdino
 	http://localhost:3051
