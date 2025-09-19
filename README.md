@@ -31,8 +31,8 @@ The API supports:
    git clone https://github.com/<your-username>/GO_BASICS.git
    cd GO_BASICS
 
-Run the server:
-```bash
+2. Run the server:
+bash
 go run main.go
 The server will start on: http://localhost:3051
 
