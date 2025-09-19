@@ -30,28 +30,27 @@ The API supports:
    ```bash
    git clone https://github.com/<your-username>/GO_BASICS.git
    cd GO_BASICS
+---
 
-Run the server:
+2. Run the server:
 
 go run main.go
 
+The server will start on: http://localhost:3051
 
-The server will start on:
-
-http://localhost:3051
-
+---
 🔗 API Endpoints
 1. Create a Car
 
 POST /cars
 Request Body (JSON):
 
-{
-  "Name": "Civic",
-  "Model": "2022",
-  "Company": "Honda",
-  "Year": 2022,
-  "Price": 25000.50
+-{
+  - "Name": "Civic",
+  - "Model": "2022",
+  - "Company": "Honda",
+  - "Year": 2022,
+  - "Price": 25000.50
 }
 
 
@@ -113,6 +112,8 @@ rand.Intn(1000) is used for generating car IDs → collisions are possible in ra
 
 For real-world use, you’d replace the in-memory map with a database (e.g., PostgreSQL, MongoDB).
 
+---
+
 🚀 Future Improvements
 
 Add GET /cars to fetch all cars.
@@ -123,6 +124,7 @@ Replace random ID generation with proper UUIDs.
 
 Persistent database storage.
 
+---
 👤 Author
 
 Your Name
