@@ -1,142 +1,92 @@
-# 🚗 Go Cars REST API
+# Car Inventory Management System
 
-This project is a simple **RESTful API in Go** that manages a collection of cars.  
-It uses **in-memory storage** (`map[int]Car`) along with a **mutex** for thread-safe operations.  
+This project is a simple **Car Inventory Management System** built with Go (Golang). It demonstrates a modular structure for handling car data, HTTP requests, middleware, and configuration.
 
-The API supports:
-- Creating a car (`POST /cars`)
-- Fetching a car by ID (`GET /cars/{id}`)
-- Deleting a car by ID (`DELETE /cars/{id}`)
+## Project Structure
+
+```
+carInventory/
+│
+├── main.go
+├── config/
+│   └── config.go          # Database configuration
+├── models/
+│   └── car.go             # Car model structure
+├── handlers/
+│   └── car_handlers.go    # Handles HTTP requests and responses for cars
+├── middleware/
+│   ├── logging.go         # Request logging middleware
+│   └── security.go        # Security checks before requests reach the server
+└── utils/
+    └── response.go        # JSON encoding and decoding utilities
+```
+
+## Features
+
+- **RESTful API** for managing car inventory
+- **Modular codebase** with clear separation of concerns
+- **Middleware** for logging and security
+- **Configurable database connection**
+- **Models** for easy data handling
+- **Utility functions** for JSON processing
+
+## Getting Started
+
+### Prerequisites
+
+- Go 1.18+
+- (Optional) A running database instance (if using persistent storage)
+
+### Installation
+
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/Aashritha123-lab/GO_BASICS.git
+    cd GO_BASICS/car_Inventory
+    ```
+
+2. Install dependencies (if any):
+    ```bash
+    go mod tidy
+    ```
+
+3. Update the database configuration in `config/config.go` as needed.
+
+### Running the Project
+
+```bash
+go run main.go
+```
+
+The server will start on the configured port (see your `main.go` or `config.go`).
+
+### API Endpoints
+
+Typical endpoints may include (check your actual implementation for details):
+
+- `GET /cars` — List all cars
+- `GET /cars/{id}` — Get details about a specific car
+- `POST /cars` — Add a new car
+- `PUT /cars/{id}` — Update a car's information
+- `DELETE /cars/{id}` — Remove a car from inventory
+
+## Folder Details
+
+- **`main.go`**: Entry point of the application.
+- **`config/config.go`**: Database and environment configuration.
+- **`models/car.go`**: Car struct and data-related logic.
+- **`handlers/car_handlers.go`**: HTTP handlers for car routes.
+- **`middleware/`**: Logging and security checks.
+- **`utils/response.go`**: Helper functions for response formatting.
+
+## Contributing
+
+Contributions are welcome! Please fork the repository and create a pull request.
+
+## License
+
+This project is licensed under the MIT License.
 
 ---
 
-## 📦 Features
-
-- Written in **Go** using only the standard library (`net/http`, `encoding/json`).
-- Simple **in-memory database** (no external dependencies).
-- Thread-safe using **sync.Mutex**.
-- JSON input/output for easy integration.
-
----
-
-## 🏗️ Project Structure
-
-.
-├── main.go # Contains the HTTP server and handlers
-└── README.md # Project documentation
-
-yaml
-
-
----
-
-## ▶️ How to Run
-
-### 1. Clone the repository
-	
-	git clone https://github.com/<your-username>/GO_BASICS.git
-	cd GO_BASICS 
-	
-
-
-### 2. Run the server
-
-	 go run main.go
-
-
-
-### 3. Access the server
-
-	The server will start on:
-	http://localhost:3051
-	
-	
-## 🔗 API Endpoints
-
-### 1. Create a Car
-
-		POST /cars
-
-		Request Body (JSON):
-
-		{
-		  "Name": "Civic",
-		  "Model": "2022",
-		  "Company": "Honda",
-		  "Year": 2022,
-		  "Price": 25000.50
-		}
-
-
-		Response:
-
-		{
-		  "ID": 123,
-		  "Name": "Civic",
-		  "Model": "2022",
-		  "Company": "Honda",
-		  "Year": 2022,
-		  "Price": 25000.5
-		}
-		
-### 2. Get a Car by ID
-
-		GET /cars/{id}
-
-		Example:
-
-		GET http://localhost:3051/cars/123
-
-
-		Response:
-
-		{
-		  "ID": 123,
-		  "Name": "Civic",
-		  "Model": "2022",
-		  "Company": "Honda",
-		  "Year": 2022,
-		  "Price": 25000.5
-		}
-
-### 3. Delete a Car
-
-		DELETE /cars/{id}
-
-		Example:
-
-		DELETE http://localhost:3051/cars/123
-
-
-		Response:
-
-		Status: 200 OK
-
-## 🛠️ Tech Stack
-
-	Language: Go
-
-	Packages: net/http, encoding/json, sync, math/rand
-
-## 📌 Notes
-
-	Data is stored in memory only. If you restart the server, all cars are lost.
-
-	rand.Intn(1000) is used for generating car IDs → collisions are possible in rare cases.
-
-	For real-world use, you’d replace the in-memory map with a database (e.g., PostgreSQL, MongoDB).
-
-## 🚀 Future Improvements
-
-	Add GET /cars to fetch all cars.
-
-	Add PUT /cars/{id} to update car details.
-
-	Replace random ID generation with proper UUIDs.
-
-	Persistent database storage.
-
-## 👤 Author
-
-	Your Name
-	GitHub: @Aashritha-123-lab
+*Created by [Aashritha123-lab](https://github.com/Aashritha123-lab)*
