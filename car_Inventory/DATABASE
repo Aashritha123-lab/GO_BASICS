@@ -1,0 +1,10 @@
+// to intiate db go the postgress bin path
+
+cd "C:\Program Files\PostgreSQL\17\bin"
+initdb.exe -D "C:\Program Files\PostgreSQL\17\data" -U postgres -W
+
+W ---- it will ask for password
+
+// Register postgress as a service
+
+pg_ctl register -N "postgresql-x64-17" -D "C:\Program Files\PostgreSQL\17\data"
