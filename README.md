@@ -79,13 +79,6 @@ Typical endpoints may include (check your actual implementation for details):
 - **`middleware/`**: Logging and security checks.
 - **`utils/response.go`**: Helper functions for response formatting.
 
-## Contributing
-
-Contributions are welcome! Please fork the repository and create a pull request.
-
-## License
-
-This project is licensed under the MIT License.
 
 ---
 
