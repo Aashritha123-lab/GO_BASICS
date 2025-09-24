@@ -1,9 +1,11 @@
-📝 URL Shortener API
+## 📝 URL Shortener API
 
 A simple URL shortening service built with Go and PostgreSQL.
 It allows users to create short URLs for long URLs and redirect users from the short URL to the original URL.
 
-📦 Features
+---
+
+## 📦 Features
 
 Shorten long URLs to a 6-character code.
 
@@ -15,7 +17,9 @@ Uses PostgreSQL to store URL mappings.
 
 RESTful API endpoints.
 
-⚙️ Prerequisites
+---
+
+## ⚙️ Prerequisites
 
 Go 1.20+
 
@@ -23,12 +27,15 @@ PostgreSQL 15+
 
 github.com/lib/pq PostgreSQL driver
 
-🛠️ Setup Instructions
-1. Clone the repository
-git clone <your-repo-url>
-cd <repo-directory>
+---
 
-2. Create PostgreSQL database & table
+## 🛠️ Setup Instructions
+
+### 1. Clone the repository
+    git clone https://github.com/Aashritha123-lab/GO_BASICS.git
+    cd shorten_url
+---
+### 2. Create PostgreSQL database & table
     CREATE DATABASE url_shortener;
 
     \c url_shortener
@@ -38,56 +45,58 @@ cd <repo-directory>
         short_response VARCHAR(6) UNIQUE NOT NULL,
         url TEXT UNIQUE NOT NULL
     );
+---
 
-3. Update DB connection
+### 3. Update DB connection
 
     Edit the DBConnection() function in main.go:
 
-    dsn := "user=postgres password=Helper@123 dbname=url_shortener sslmode=disable"
+    dsn := "user=username password=example@123 dbname=dbname sslmode=disable"
 
 
 Replace with your PostgreSQL credentials.
-
-4. Run the server
+---
+### 4. Run the server
     
     go run main.go
 
 
-Server will start on http://localhost:3051.
+    Server will start on http://localhost:3051.
 
-🔗 API Endpoints
+## 🔗 API Endpoints
 
-1. Shorten URL
+### 1. Shorten URL
 
-URL: /shorten
+    URL: /shorten
 
-Method: POST
+    Method: POST
 
-Body (JSON):
+    Body (JSON):
 
-{
-    "url": "https://example.com"
-}
-
-
-Response (JSON):
-
-{
-    "short_url": "http://localhost:3051/Ab12Cd",
-    "original_url": {
+    {
         "url": "https://example.com"
     }
-}
 
-2. Redirect Short URL
 
-URL: /{short_code}
+    Response (JSON):
 
-Method: GET
+    {
+        "short_url": "http://localhost:3051/Ab12Cd",
+        "original_url": {
+            "url": "https://example.com"
+        }
+    }
 
-Redirects the user to the original URL.
+### 2. Redirect Short URL
 
-🔄 URL Shortener Flow Diagram
+    URL: /{short_code}
+
+    Method: GET
+
+    Redirects the user to the original URL.
+---
+
+## 🔄 URL Shortener Flow Diagram
 
 flowchart TD
     A[Client: POST /shorten] -->|Send original URL| B[Go Server: ShorthandUrl Handler]
@@ -104,20 +113,20 @@ flowchart TD
     K -->|Found| L[HTTP Redirect to original URL]
     K -->|Not found| M[Return 404 Not Found]
 
-⚠️ Notes
+## ⚠️ Notes
 
-Short codes are 6-character alphanumeric strings.
+    Short codes are 6-character alphanumeric strings.
 
-Duplicate long URLs will return a conflict error.
+    Duplicate long URLs will return a conflict error.
 
-Random short codes are generated; collisions are checked in the database.
+    Random short codes are generated; collisions are checked in the database.
 
-🛠️ Improvements / Next Steps
+## 🛠️ Improvements / Next Steps
 
-Add expiration date for short URLs.
+    Add expiration date for short URLs.
 
-Track analytics (click counts, timestamps).
+    Track analytics (click counts, timestamps).
 
-Add user authentication.
+    Add user authentication.
 
-Dockerize the app for easy deployment.
+    Dockerize the app for easy deployment.
