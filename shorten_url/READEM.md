@@ -53,8 +53,7 @@ github.com/lib/pq PostgreSQL driver
 
     dsn := "user=username password=example@123 dbname=dbname sslmode=disable"
 
-
-Replace with your PostgreSQL credentials.
+    Replace with your PostgreSQL credentials.
 ---
 ### 4. Run the server
     
@@ -103,16 +102,16 @@ flowchart TD
    - B --> C{Validate URL}
    - C -->|URL exists| D[Return 409 Conflict]
    - C -->|URL does not exist| E[Generate short code]
-   - E --> F{Check code in DB}
+   - E --> F {Check code in DB}
    - F -->|Code exists| E
-   - F -->|Code unique| G[Insert short_url into DB]
+   - F -->|Code unique| G [Insert short_url into DB]
    - G --> H[Return JSON with short URL]
     
-   - I[Client: GET /{short_code}] -->|Request short URL| J[Go Server: Redirect Handler]
+   - I [Client: GET /{short_code}] -->|Request short URL| J[Go Server: Redirect Handler]
    - J --> K[Check short_code in DB]
    - K -->|Found| L[HTTP Redirect to original URL]
    - K -->|Not found| M[Return 404 Not Found]
-
+---
 ## ⚠️ Notes
 
     Short codes are 6-character alphanumeric strings.
