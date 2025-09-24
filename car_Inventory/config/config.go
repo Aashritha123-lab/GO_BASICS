@@ -14,7 +14,7 @@ func ConnectDB() {
 	// to connect to the databse sql requires username,password and host right either we can create seperate vairables
 	// or we use datasource with  a single string
 
-	dsn := "user=postgres password=Helper@123 dbname=postgres sslmode=disable"
+	dsn := "user=postgres password=exampler@123 dbname=postgres sslmode=disable"
 	// dsn := "user=postgres password=Helper@123 database=postgres sslmode=disable port=xxxx host=localhost"
 	// if we don't mention host and port it will default like 5432 port and host as localhost
 
